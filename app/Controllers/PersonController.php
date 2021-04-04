@@ -16,8 +16,17 @@ class PersonController extends BaseController
          return view('admin/persons-list');
     }
 
-    public function profile()
+
+
+    public function profile($id)
     {
         return view('admin/person-profile');
     }
+
+    public function person($name,$city,$age)
+    {
+        return 'welcome '.$name.' '.$city.' '.$age;
+    }
+
+
 }

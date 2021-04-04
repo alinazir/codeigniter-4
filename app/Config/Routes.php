@@ -34,9 +34,14 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'HomeController::index');
 
-$routes->get('add/person','PersonController::add');
-$routes->get('person/list','PersonController::personsList');
-$routes->get('person/profile','PersonController::profile');
+
+
+$routes->group('admin',function ($routes){
+    $routes->get('add/person','PersonController::add',['as'=>'addPerson']);
+    $routes->get('person/list','PersonController::personsList',['as'=>'personList']);
+    $routes->get('person/profile/(:num)','PersonController::profile/$1',['as'=>'personProfile']);
+});
+
 
 /*
  * --------------------------------------------------------------------

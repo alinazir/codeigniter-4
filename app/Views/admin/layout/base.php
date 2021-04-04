@@ -79,8 +79,8 @@
                 <li class="nav-item pcoded-hasmenu">
                     <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-activity"></i></span><span class="pcoded-mtext">Address Book</span></a>
                     <ul class="pcoded-submenu">
-                        <li><a href="<?= base_url('public').route_to('add/person') ?>">Add Person</a></li>
-                        <li><a href="<?= base_url('public').route_to('person/list')?>">Person List</a></li>
+                        <li><a href="<?= base_url('public/').route_to('addPerson')?>">Add Person</a></li>
+                        <li><a href="<?= base_url('public').route_to('personList')?>">Person List</a></li>
                     </ul>
                 </li>
 
