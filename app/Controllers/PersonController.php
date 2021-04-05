@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-
 use App\Controllers\BaseController;
 
 class PersonController extends BaseController
@@ -23,10 +22,26 @@ class PersonController extends BaseController
         return view('admin/person-profile');
     }
 
-    public function person($name,$city,$age)
-    {
-        return 'welcome '.$name.' '.$city.' '.$age;
-    }
+
+   public function getUserData()
+   {
+//      $name=  $this->request->getVar('name');
+//      $city=  $this->request->getVar('city');
+
+       $name=$this->request->getPost('name');
+       $email=$this->request->getPost('email');
+       $city=$this->request->getPost('city');
+       $country=$this->request->getPost('country');
+       $gender=$this->request->getPost('gender');
+       $address=$this->request->getPost('address');
+       $date=$this->request->getPost('date');
+
+
+
+      echo 'conutry name '.$country;
+   }
+
+
 
 
 }

@@ -40,6 +40,8 @@ $routes->group('admin',function ($routes){
     $routes->get('add/person','PersonController::add',['as'=>'addPerson']);
     $routes->get('person/list','PersonController::personsList',['as'=>'personList']);
     $routes->get('person/profile/(:num)','PersonController::profile/$1',['as'=>'personProfile']);
+
+    $routes->post('person/data','PersonController::getUserData',['as'=>'getData']);
 });
 
 

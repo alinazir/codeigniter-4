@@ -24,60 +24,60 @@
                 <h5>Add Contact Info</h5>
             </div>
             <div class="card-body">
-                <form>
+                <form action="<?= base_url('public').route_to('getData') ?>" method="post">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label class="floating-label" for="Email">Name</label>
-                                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" value="">
+                                <label class="floating-label" for="name">Name</label>
+                                <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" value="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="Text">Email</label>
-                                <input type="text" class="form-control" id="Text" placeholder="">
+                                <input type="text" name="email" class="form-control" id="Text" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group fill">
                                 <label class="floating-label" for="Icon">Profie Image</label>
-                                <input type="file" class="form-control" id="Icon" placeholder="sdf">
+                                <input type="file"  name="photo" class="form-control" id="Icon" placeholder="sdf">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group fill">
                                 <label class="floating-label" for="Birth">Birth Date</label>
-                                <input type="date" class="form-control" id="Birth" placeholder="123">
+                                <input type="date" name="date" class="form-control" id="Birth" placeholder="123">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="Age">Gender</label>
-                                <input type="text" class="form-control" id="Age" placeholder="">
+                                <input type="text" name="gender" class="form-control" id="Age" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="password">Phone</label>
-                                <input type="password" class="form-control" id="password" placeholder="">
+                                <input type="text" name="phone" class="form-control" id="password" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="password">Address</label>
-                                <input type="password" class="form-control" id="password" placeholder="">
+                                <input type="text" name="address" class="form-control" id="password" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="password">City</label>
-                                <input type="password" class="form-control" id="password" placeholder="">
+                                <input type="text" name="city" class="form-control" id="password" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="password">Country</label>
-                                <input type="password" class="form-control" id="password" placeholder="">
+                                <input type="text" name="country" class="form-control" id="password" placeholder="">
                             </div>
                         </div>
                     </div>
