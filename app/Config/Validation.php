@@ -26,6 +26,22 @@ class Validation
 		CreditCardRules::class,
 	];
 
+    public $mig = [
+          'name'=>[
+              'rules'=>'required',
+              'errors'=>[
+                  'required'=>'user name is required'
+              ]
+          ],
+        'email'=>[
+            'rules'=>'required|valid_email',
+            'errors'=>[
+                'required'=>'user email is required',
+                'valid_email'=>'email must be valid',
+            ]
+        ],
+    ];
+
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.

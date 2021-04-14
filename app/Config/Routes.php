@@ -50,6 +50,9 @@ $routes->get('test/model/all','Modelctrl::index');
 $routes->get('model/get/(:num)','Modelctrl::getPerson/$1');
 $routes->post('model/save','Modelctrl::savePerson');
 
+$routes->get('migration/all','Migrationctrl::index');
+$routes->post('migration/save','Migrationctrl::saveUser');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
