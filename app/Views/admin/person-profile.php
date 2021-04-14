@@ -47,19 +47,19 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="mb-1">Lary Doe</h5>
+                    <h5 class="mb-1"><?= $person[0]->name ?></h5>
                     <p class="mb-2 text-muted">UI/UX Designer</p>
                 </div>
                 <div class="col-md-8 mt-md-4">
                     <div class="row">
                         <div class="col-md-6">
-                            <a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-globe mr-2 f-18"></i>12-04-2000</a>
+                            <a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-globe mr-2 f-18"></i><?= $person[0]->dob ?></a>
                             <div class="clearfix"></div>
-                            <a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-user mr-2 f-18"></i>Male</a>
+                            <a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-user mr-2 f-18"></i><?= $person[0]->gender ?></a>
                             <div class="clearfix"></div>
-                            <a href="mailto:demo@domain.com" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i>demo@domain.com</a>
+                            <a href="mailto:demo@domain.com" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i><?= $person[0]->email ?></a>
                             <div class="clearfix"></div>
-                            <a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i>+1 9999-999-999</a>
+                            <a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i><?= $person[0]->phone ?></a>
 
 
                         </div>
@@ -67,22 +67,20 @@
                             <div class="media">
                                 <i class="feather icon-map-pin mr-2 mt-1 f-18"></i>
                                 <div class="media-body">
-                                    <p class="mb-0 text-muted">4289 Calvin Street</p>
-                                    <p class="mb-0 text-muted">Baltimore, near MD Tower Maryland,</p>
-                                    <p class="mb-0 text-muted">Maryland (21201)</p>
+                                    <p class="mb-0 text-muted"><?= $person[0]->address ?></p>
                                 </div>
                             </div>
                             <div class="media">
                                 <i class="feather icon-map-pin mr-2 mt-1 f-18"></i>
                                 <div class="media-body">
-                                    <p class="mb-0 text-muted">Lahore</p>
+                                    <p class="mb-0 text-muted"><?= $person[0]->city ?></p>
                                 </div>
                             </div>
 
                             <div class="media">
                                 <i class="feather icon-map-pin mr-2 mt-1 f-18"></i>
                                 <div class="media-body">
-                                    <p class="mb-0 text-muted">Pakistan</p>
+                                    <p class="mb-0 text-muted"><?= $person[0]->country ?></p>
                                 </div>
                             </div>
                         </div>

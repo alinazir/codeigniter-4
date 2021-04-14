@@ -44,65 +44,22 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>
-                                <img src="<?= base_url('public/admin/assets/images/user/avatar-2.jpg')?>" class="img-fluid img-radius wid-40" alt="">
-                            </td>
-                            <td>Micheal Pewd</td>
-                            <td>patient@temp.com</td>
-                            <td>+984-9388638</td>
-                            <td>male</td>
-                            <td>
-                                <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
-                                <a href="<?= base_url('public/').route_to('personProfile','2') ?>" class="btn btn-primary btn-sm"><i class="feather icon-edit"></i>&nbsp;Profile </a>
-                                <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="<?= base_url('public/admin/assets/images/user/avatar-3.jpg')?>" class="img-fluid img-radius wid-40" alt="">
-                            </td>
-                            <td>Micheal Pewd</td>
-                            <td>patient@temp.com</td>
-                            <td>+984-9388638</td>
-                            <td>male</td>
-                            <td>
-                                <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
-                                <a href="#!" class="btn btn-primary btn-sm"><i class="feather icon-edit"></i>&nbsp;Profile </a>
-
-                                <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="<?= base_url('public/admin/assets/images/user/avatar-5.jpg')?>" class="img-fluid img-radius wid-40" alt="">
-                            </td>
-                            <td>Erich Mcbride</td>
-                            <td>xidim@temp.com</td>
-                            <td>+612-1385682</td>
-                            <td>female</td>
-
-                            <td>
-                                <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
-                                <a href="#!" class="btn btn-primary btn-sm"><i class="feather icon-edit"></i>&nbsp;Profile </a>
-
-                                <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="<?= base_url('public/admin/assets/images/user/avatar-1.jpg')?>" class="img-fluid img-radius wid-40" alt="">
-                            </td>
-                            <td>Micheal Pewd</td>
-                            <td>patient@temp.com</td>
-                            <td>+984-9388638</td>
-                            <td>male</td>
-                            <td>
-                                <a href="#!" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
-                                <a href="#!" class="btn btn-primary btn-sm"><i class="feather icon-edit"></i>&nbsp;Profile </a>
-                                <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
-                            </td>
-                        </tr>
+                        <?php foreach ($persons->getResult() as $person): ?>
+                            <tr>
+                                <td>
+                                    <img src="<?= base_url('public/admin/assets/images/user/avatar-2.jpg')?>" class="img-fluid img-radius wid-40" alt="">
+                                </td>
+                                <td><?= $person->name ?></td>
+                                <td><?= $person->email ?></td>
+                                <td><?= $person->phone ?></td>
+                                <td><?= $person->gender ?></td>
+                                <td>
+                                    <a href="<?= base_url('public/').route_to('edit',$person->id) ?>" class="btn btn-info btn-sm"><i class="feather icon-edit"></i>&nbsp;Edit </a>
+                                    <a href="<?= base_url('public/').route_to('personProfile',$person->id) ?>" class="btn btn-primary btn-sm"><i class="feather icon-edit"></i>&nbsp;Profile </a>
+                                    <a href="#!" class="btn btn-danger btn-sm"><i class="feather icon-trash-2"></i>&nbsp;Delete </a>
+                                </td>
+                            </tr>
+                        <?php endforeach ?>
 
                         </tbody>
                     </table>

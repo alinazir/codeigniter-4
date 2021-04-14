@@ -40,10 +40,15 @@ $routes->group('admin',function ($routes){
     $routes->get('add/person','PersonController::add',['as'=>'addPerson']);
     $routes->get('person/list','PersonController::personsList',['as'=>'personList']);
     $routes->get('person/profile/(:num)','PersonController::profile/$1',['as'=>'personProfile']);
+    $routes->get('person/edit/(:num)','PersonController::edit/$1',['as'=>'edit']);
 
-    $routes->post('person/data','PersonController::getUserData',['as'=>'getData']);
+    $routes->post('person/save','PersonController::getUserData',['as'=>'getData']);
+    $routes->post('person/update','PersonController::updatePerson',['as'=>'updatePerson']);
 });
 
+$routes->get('test/model/all','Modelctrl::index');
+$routes->get('model/get/(:num)','Modelctrl::getPerson/$1');
+$routes->post('model/save','Modelctrl::savePerson');
 
 /*
  * --------------------------------------------------------------------

@@ -24,25 +24,26 @@
                 <h5>Add Contact Info</h5>
             </div>
             <div class="card-body">
-            <?php if(session()->has('success')): ?>
-                <div class="text text-success"><?= session('success') ?></div>
-            <?php endif;?>
-            <?php if (isset($validation)): ?>
-                <?= $validation->listErrors() ?>
+                <?php if(session()->has('success')): ?>
+                    <div class="text text-success"><?= session('success') ?></div>
+                <?php endif;?>
+                <?php if (isset($validation)): ?>
+                    <?= $validation->listErrors() ?>
                 <?php endif;?>
 
-                <form action="<?= base_url('public').route_to('getData') ?>" method="post">
+                <form action="<?= base_url('public').route_to('updatePerson') ?>" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?= $person[0]->id ?>">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="name">Name</label>
-                                <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" value="">
+                                <input type="text" name="name" value="<?= $person[0]->name ?>" class="form-control" id="name" aria-describedby="emailHelp" value="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="Text">Email</label>
-                                <input type="text" name="email" class="form-control" id="Text" placeholder="">
+                                <input type="text" name="email" value="<?= $person[0]->email ?>" class="form-control" id="Text" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
@@ -54,37 +55,37 @@
                         <div class="col-sm-4">
                             <div class="form-group fill">
                                 <label class="floating-label" for="Birth">Birth Date</label>
-                                <input type="date" name="date" class="form-control" id="Birth" placeholder="123">
+                                <input type="date" name="date" value="<?= $person[0]->dob ?>" class="form-control" id="Birth" placeholder="123">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="Age">Gender</label>
-                                <input type="text" name="gender" class="form-control" id="Age" placeholder="">
+                                <input type="text" name="gender"  value="<?= $person[0]->gender ?>" class="form-control" id="Age" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="password">Phone</label>
-                                <input type="text" name="phone" class="form-control" id="password" placeholder="">
+                                <input type="text" name="phone" value="<?= $person[0]->phone ?>" class="form-control" id="password" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="password">Address</label>
-                                <input type="text" name="address" class="form-control" id="password" placeholder="">
+                                <input type="text" name="address" value="<?= $person[0]->address ?>" class="form-control" id="password" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="password">City</label>
-                                <input type="text" name="city" class="form-control" id="password" placeholder="">
+                                <input type="text" name="city" value="<?= $person[0]->city ?>" class="form-control" id="password" placeholder="">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="floating-label" for="password">Country</label>
-                                <input type="text" name="country" class="form-control" id="password" placeholder="">
+                                <input type="text" name="country" value="<?= $person[0]->country ?>" class="form-control" id="password" placeholder="">
                             </div>
                         </div>
                     </div>
