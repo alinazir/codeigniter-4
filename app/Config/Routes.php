@@ -56,6 +56,8 @@ $routes->post('migration/save','Migrationctrl::saveUser');
 $routes->get('email/compose','Sendemailctrl::index');
 $routes->post('email/send','Sendemailctrl::sendEmail',['as'=>'sendEmail']);
 
+$routes->get('agent','Useragentctlr::index');
+
 
 /*
  * --------------------------------------------------------------------

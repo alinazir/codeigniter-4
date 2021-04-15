@@ -32,6 +32,7 @@
                 <?php endif;?>
 
                 <form action="<?= base_url('public').route_to('getData') ?>" method="post">
+                    <?= csrf_field() ?>
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">

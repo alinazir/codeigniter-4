@@ -50,8 +50,8 @@ class PersonController extends BaseController
        ]);
        if (!$valid) {
 
-          // return view('admin/add-person',['validation'=>$this->validator]);
-          // return redirect()->route('addPerson')->with('validation',$this->validator);
+          return view('admin/add-person',['validation'=>$this->validator]);
+          //return redirect()->route('addPerson')->with('validation',$this->validator);
        } else {
 
            $name = $this->request->getPost('name');
@@ -103,8 +103,8 @@ class PersonController extends BaseController
         ]);
         if (!$valid) {
 
-            // return view('admin/add-person',['validation'=>$this->validator]);
-            // return redirect()->route('addPerson')->with('validation',$this->validator);
+            return view('admin/add-person',['validation'=>$this->validator]);
+            //return redirect()->route('addPerson')->with('validation',$this->validator);
         } else {
 
             $name = $this->request->getPost('name');
