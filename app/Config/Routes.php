@@ -58,6 +58,11 @@ $routes->post('email/send','Sendemailctrl::sendEmail',['as'=>'sendEmail']);
 
 $routes->get('agent','Useragentctlr::index');
 
+$routes->get('seesion/set','Sessionctrl::setSession');
+$routes->get('seesion/get','Sessionctrl::getSession');
+$routes->get('seesion/remove','Sessionctrl::destorySession');
+
+
 
 /*
  * --------------------------------------------------------------------
